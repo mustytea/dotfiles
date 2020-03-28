@@ -1,0 +1,107 @@
+#tabbar {
+  background:#26231f;
+  scrollbar-width:none;
+}
+.newtab-button-box {
+  display:none;
+}
+tab-item {
+  left:0;
+  width:auto;
+  padding:5px 7px 5px 6px;
+  margin-left:0 !important;
+  border-top:1px solid #0c0b0a;
+  border-left:none ;
+  border-bottom:1px solid #0c0b0a;
+  background:#332e29;
+  font-weight:500;
+}
+#tabbar:hover tab-item[data-level][data-level="0"] {
+  margin-left:0% !important;
+}
+#tabbar:hover tab-item[data-level][data-level="1"] {
+  margin-left:4% !important;
+  border-left:1px solid #0c0b0a;
+}
+#tabbar:hover tab-item[data-level][data-level="2"] {
+  margin-left:8% !important;
+  border-left:1px solid #0c0b0a;
+}
+#tabbar:hover tab-item[data-level][data-level="3"] {
+  margin-left:12% !important;
+  border-left:1px solid #0c0b0a;
+}
+#tabbar:hover tab-item[data-level][data-level="4"] {
+  margin-left:16% !important;
+  border-left:1px solid #0c0b0a;
+}
+#tabbar:hover tab-item[data-level][data-level="5"] {
+  margin-left:20% !important;
+  border-left:1px solid #0c0b0a;
+}
+#tabbar:hover tab-item[data-level][data-level="6"] {
+  margin-left: 24% !important;
+  border-left:1px solid #0c0b0a;
+}
+tab-item.active {
+  background:--background-3;
+}
+tab-item:not(.active):hover {
+  background:--background-4;
+}
+tab-item tab-label {
+  padding-left:0.309rem !important;
+  color:#efcca0;
+}
+#tabbar:hover tab-item tab-label {
+  display:initial;
+}
+tab-item.active .highlighter::before,
+tab-item.bundled-active .highlighter::before,
+tab-item.highlighted .highlighter::before,
+tab-item:not(.faviconized).bundled-active .highlighter::after,
+tab-item:not(.faviconized).highlighted .highlighter::after {
+  background:#e54949;
+}
+/* This is an arrow which changes collapse status for tabs with children */
+tab-item tab-twisty {
+  display:none;
+}
+tab-item tab-closebox {
+  margin-right:0.309rem;
+}
+tab-closebox {
+  color:#efcca0 !important;
+}
+tab-closebox::after {
+  color:#efcca0 !important;
+  content: "x";
+  background: none;
+  line-height: 1;
+  mask: none;
+  text-align: center;
+  width: 1.25em;
+}
+tab-item * {
+  color:#efcca0 !important;
+  fill:#efcca0 !important;
+}
+#tabbar:hover tab-item tab-closebox {
+  display:initial
+}
+tab-item .counter {
+  order:-1;
+  margin-bottom:-10px;
+  margin-right:-18px;
+  padding-left:10px;
+  color:#efcca0;
+  text-shadow:
+    -1px -1px 0 #0c0b0a,
+     1px -1px 0 #0c0b0a,
+    -1px  1px 0 #0c0b0a,
+     1px  1px 0 #0c0b0a;
+     z-index:999;
+}
+tab-item .counter::before, tab-item .counter::after {
+  display:none;
+}

@@ -1,0 +1,268 @@
+html, body {
+  font-size:13px !important;
+}
+/* Initial background color for page loads */
+.browserContainer {
+  background:#191714 !important;
+}
+/* Tabs
+------- */
+#TabsToolbar {
+  display:none;
+}
+/* Navigation
+------------- */
+#navigator-toolbox {
+  border-bottom:1px solid #0c0b0a !important;
+  position:relative;
+  z-index:999;
+}
+#nav-bar {
+  color:#efcca0 !important;
+  background:#191714 !important;
+  font-weight:500;
+}
+#forward-button, #back-button {
+  display:none;
+}
+.toolbarbutton-animatable-box, .toolbarbutton-1 {
+  fill:#efcca0 !important;
+}
+#urlbar-container {
+  padding-block:2px !important;
+  margin-inline:2px !important;
+}
+#urlbar {
+  color:#efcca0 !important;
+  border:none !important;
+  background:none !important;
+  padding:0 !important;
+  box-shadow:none !important;
+}
+/* Autocomplete Results */
+.urlbarView {
+  color:#efcca0 !important;
+  background:#191714 !important;
+  border-bottom:1px solid #0c0b0a !important;
+  font-weight:500;
+}
+.search-one-offs {
+  display:none !important;
+}
+.urlbarView:not(.megabar) .urlbarView-row:not([type="tip"])[selected],
+.urlbarView.megabar .urlbarView-row:not([type="tip"])[selected] > .urlbarView-row-inner {
+  color:#efcca0 !important;
+  background:#26231f !important;
+}
+.urlbarView-url {
+  color:#e54949 !important;
+}
+.urlbarView-title:not(:empty) ~ .urlbarView-action {
+  color:#ea8623 !important;
+}
+/* Sidebar
+---------- */
+#sidebar-box {
+  display:flex;
+  width:30px;
+  min-width:30px;
+  max-width:30px;
+  overflow:hidden;
+  position:fixed;
+  z-index:998;
+  top:35px;
+  bottom:0;
+  left:0;
+  transition:all ease 166ms;
+  background:#26231f !important;
+  border-right:1px solid #0c0b0a;
+}
+#sidebar-box:hover {
+  width:260px;
+  min-width:260px;
+  max-width:260px;
+}
+#sidebar-box * {
+  background:#26231f !important;
+}
+#sidebar {
+  width:auto !important;
+  min-width:auto !important;
+  max-width:auto !important;
+  flex:auto;
+  background:#26231f !important;
+}
+#sidebar-splitter {
+  display:none;
+}
+#sidebar-header {
+  display:none;
+}
+#main-window #browser {
+  margin-left:30px;
+}
+#main-window[inFullscreen] #browser {
+  margin-left:0;
+}
+#main-window[inFullscreen] #sidebar-box {
+  display: none !important;
+}
+/* Hide tab bar when only one window is open */
+/* This relies on the Tab Count in Window Title addon for selection */
+/* NTS: Rework above CSS using sidebarcommand attribute selection */
+#main-window[titlepreface^="[1] "] #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+  display:none !important;
+}
+#main-window[titlepreface^="[1] "] #browser {
+  margin-left:0;
+}
+/* Context Menus
+---------------- */
+/*  */
+popupset > * {
+  background:none !important;
+  font-weight:500 !important;
+}
+popupset {
+  border-color:#0c0b0a !important;
+  box-shadow:none !important;
+  background:none !important;
+  font-weight:500 !important;
+}
+popupset * {
+  border-color:#0c0b0a !important;
+  box-shadow:none !important;
+  font-weight:500 !important;
+}
+panelview {
+  background:#26231f !important;
+  border-color:#0c0b0a !important;
+}
+panelview * {
+  color:#efcca0;
+}
+.panel-arrowcontent {
+  box-shadow:0 0 3px 0 rgba(0,0,0,0.309) !important;
+  border:1 solid #0c0b0a !important;
+  background:#0c0b0a !important;
+}
+:-moz-any(panel, menupopup)::part(arrow) {
+  fill:#0c0b0a !important;
+}
+menupopup {
+	-moz-appearance: none !important;
+	background-color: #191714 !important;
+	border: 1px #0c0b0a solid !important;
+}
+menupopup * {
+  color:#efcca0 !important;
+  fill:#efcca0 !important;
+}
+menuseparator {
+	-moz-appearance: none !important;
+  border-bottom:1px solid #0c0b0a !important;
+}
+menuitem, menu {
+	-moz-appearance: none !important;
+	color:#efcca0 !important;
+	padding: 7.5px 0px 7.5px 0px !important;
+}
+menuitem[disabled="true"], menuitem[disabled="true"] > .menu-text {
+	color:#bca07e !important;
+}
+menuitem:hover, menu:hover, menu[open="true"], menuitem[_moz-menuactive="true"]	 {
+	-moz-appearance: none !important;
+	padding: 7.5px 0px 7.5px 0px !important;
+	background-color: #332e29 !important;
+}
+menugroup {
+	padding: 0px !important;
+	background-color: transparent !important;
+}
+menuitem > .menu-text, menuitem > .menu-iconic-text {
+	color: #ffd9aa !important;
+}
+menuitem[type="checkbox"] {
+	padding-left: 8px !important;
+	padding-top: 6.5px !important;
+	padding-bottom: 6.5px !important;
+}
+menuitem[type="radio"] {
+	padding-left: 8px !important;
+	padding-top: 6.5px !important;
+	padding-bottom: 6.5px !important;
+}
+menuitem[type="checkbox"] > .menu-iconic-text, menuitem[type="radio"] > .menu-iconic-text {
+	padding-left: 5px !important;
+}
+menuitem[checked="true"][type="checkbox"] > .menu-iconic-left {
+	padding: 7px 0px 0px 0px !important;
+	border: solid white;
+	border-width: 0 0 2px 2px;
+	transform: rotate(-45deg) scale(.75);
+	margin-bottom: 4px !important;
+}
+menuitem[checked="true"][type="radio"] > .menu-iconic-left {
+	padding: 1px !important;
+	border: solid white;
+	height: 17px !important;
+	border-radius: 100%;
+	background: white;
+	transform: scale(.5);
+}
+menucaption {
+	background-color: transparent !important;
+	color: #efcca0 !important;
+}
+#ContentSelectDropdown > menupopup {
+	background-image: none !important;
+}
+#ContentSelectDropdown {
+	padding: 0px !important;
+}
+menulist {
+	-moz-appearance: none !important;
+	padding: 4px 4px 4px 4px !important;
+	border: 2px solid #666666 !important;
+	background-color: transparent !important;
+}
+menulist:hover {
+	padding: 4px 4px 4px 4px !important;
+	border: 2px solid #999999 !important;
+	background-color: transparent !important;
+}
+menulist[open="true"]  {
+	border: 2px solid #666666 !important;
+	background-color: #333333 !important;
+}
+#context-back > .menu-iconic-left, #context-forward > .menu-iconic-left, #context-reload > .menu-iconic-left, #context-stop > .menu-iconic-left, #context-bookmarkpage > .menu-iconic-left {
+	padding: 0px !important;
+}
+.menu-iconic-left {
+	-moz-appearance: none !important;
+	padding: 0px 5px 0px 9px !important;
+}
+.menu-right {
+	-moz-appearance: none !important;
+	padding: 7.5px !important;
+	margin-right: 6px !important;
+	color: #efcca0 !important;
+	border: solid #efcca0;
+	border-width: 0 2px 2px 0px;
+	transform: rotate(-45deg) scale(.55);
+}
+tooltip {
+	-moz-appearance: none !important;
+	color: white !important;
+	background-color: #2B2B2B !important;
+	border: 1px solid #767676 !important;
+	padding: 6.5px !important;
+}
+/* Set these if you have a custom qt theme and want to apply it to the */
+/* context menu navigation icons */
+#context-navigation {
+  background:#26231f !important;
+}
+#context-navigation * {
+  fill:#efcca0 !important;
+}

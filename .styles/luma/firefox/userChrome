@@ -1,0 +1,160 @@
+html, body {
+  font-size:10px !important;
+}
+/* Initial background color for page loads */
+.browserContainer {
+  background:#efdcc4 !important;
+}
+/* Tabs
+------- */
+#TabsToolbar {
+  display:none;
+}
+/* Navigation
+------------- */
+#navigator-toolbox {
+  border-bottom:1px solid #0f0705 !important;
+  position:relative;
+  z-index:999;
+}
+#nav-bar {
+  color:#191714 !important;
+  background:#75372b !important;
+  font-weight:500;
+}
+#forward-button, #back-button {
+  display:none;
+}
+.toolbarbutton-animatable-box, .toolbarbutton-1 {
+  fill:#191714 !important;
+}
+#urlbar-container {
+  padding-block:2px !important;
+  margin-inline:2px !important;
+}
+#urlbar {
+  color:#191714 !important;
+  border:none !important;
+  background:none !important;
+  padding:0 !important;
+  box-shadow:none !important;
+}
+/* Autocomplete Results */
+.urlbarView {
+  color:#191714 !important;
+  background:#75372b !important;
+  border-bottom:1px solid  !important;
+  font-weight:500;
+}
+.search-one-offs {
+  display:none !important;
+}
+.urlbarView:not(.megabar) .urlbarView-row:not([type="tip"])[selected],
+.urlbarView.megabar .urlbarView-row:not([type="tip"])[selected] > .urlbarView-row-inner {
+  color:#191714 !important;
+  background:#5b2d21 !important;
+}
+.urlbarView-url {
+  color:#005b00 !important;
+}
+.urlbarView-title:not(:empty) ~ .urlbarView-action {
+  color:#00005b !important;
+}
+/* Sidebar
+---------- */
+#sidebar-box {
+  display:flex;
+  width:30px;
+  min-width:30px;
+  max-width:30px;
+  overflow:hidden;
+  position:fixed;
+  z-index:998;
+  top:35px;
+  bottom:0;
+  left:0;
+  transition:all ease 166ms;
+  background:none !important;
+  background:#5b2d21 !important;
+  border-right:1px solid #0f0705;
+}
+#sidebar-box:hover {
+  width:260px;
+  min-width:260px;
+  max-width:260px;
+}
+#sidebar-box * {
+  background:#5b2d21 !important;
+}
+#sidebar {
+  width:auto !important;
+  min-width:auto !important;
+  max-width:auto !important;
+  flex:auto;
+  background:#5b2d21 !important;
+}
+#sidebar-splitter {
+  display:none;
+}
+#sidebar-header {
+  display:none;
+}
+#main-window #browser {
+  margin-left:30px;
+}
+#main-window[inFullscreen] #browser {
+  margin-left:0;
+}
+#main-window[inFullscreen] #sidebar-box {
+  display: none !important;
+}
+/* Hide tab bar when only one window is open */
+/* This relies on the Tab Count in Window Title addon for selection */
+/* NTS: Rework above CSS using sidebarcommand attribute selection */
+#main-window[titlepreface^="[1] "] #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+  display:none !important;
+}
+#main-window[titlepreface^="[1] "] #browser {
+  margin-left:0;
+}
+/* Context Menus
+---------------- */
+/*  */
+popupset > * {
+  background:none !important;
+  font-weight:500 !important;
+}
+popupset {
+  border-color:#0f0705 !important;
+  box-shadow:none !important;
+  background:none !important;
+  font-weight:500 !important;
+}
+popupset * {
+  border-color:#0f0705 !important;
+  box-shadow:none !important;
+  font-weight:500 !important;
+}
+panelview {
+  background:#5b2d21 !important;
+  border-color:#0f0705 !important;
+}
+panelview * {
+  color:#191714;
+}
+.panel-arrowcontent {
+  box-shadow:0 0 3px 0 rgba(0,0,0,0.309) !important;
+  border:1 solid #0f0705 !important;
+  background:#0f0705 !important;
+}
+:-moz-any(panel, menupopup)::part(arrow) {
+  fill:#0f0705 !important;
+}
+/* Set these if you have a custom qt theme and want to apply it to the */
+/* context menu navigation icons */
+#context-navigation {
+  background:#5b2d21 !important;
+}
+#context-navigation * {
+  fill:#191714 !important;
+}

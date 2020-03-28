@@ -1,0 +1,92 @@
+Xft.dpi:			92
+Xft.antialias:			true
+Xft.hinting:			true
+Xft.rgba:			rgb
+Xft.autohint:			false
+Xft.hintstyle:			hintslight
+Xft.lcdfilter: 			lcdnone
+
+Xcursor.theme:			openzone
+Xcursor.size:			0
+
+URxvt.font:             xft:Source Code Pro:style=Medium:pixelsize=13,\
+						xft:SauceCodePro Nerd Font Mono:pixelsize=13
+URxvt.boldFont:			xft:Source Code Pro:style=Medium:pixelsize=13
+URxvt.dpi:			92
+URxvt.antialias:		true
+URxvt.hinting:			true
+URxvt.rgba:			rgb
+URxvt.autohint:			false
+URxvt.hintstyle:		hintslight
+URxvt.lcdfilter:		lcdnone
+! URxvt.depth:                    32
+URxvt*scrollBar:                false
+URxvt*mouseWheelScrollPage:     false
+URxvt*cursorBlink:              true
+URxvt*saveLines:                5000
+URxvt.iso14755:                 false
+URxvt.keysym.Shift-Control-V:   eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:   eval:selection_to_clipboard
+URxvt*internalBorder:           20
+URxvt*iconFile:                 /usr/share/icons/breeze/apps/16/utilities-terminal.svg
+
+! Colour Assignments
+! Define colours as closest approximation to 
+! maintain cohesion in terminal applications 
+! 16 ANSI colour palette
+
+#define bg0 #191714
+#define bg1 #26231f
+#define fg0 #d8b68f
+#define fg1 #efcca0
+#define cn0 #e85629
+#define cn1 #e54949
+#define cn2 #e0bA3c
+#define cn3 #ea8623
+#define cn4 cn2
+#define cn5 cn2
+! #define cn4 #cdb1ef
+! #define cn5 #ace2ce
+#define cb0 cn0
+#define cb1 cn1
+#define cb2 cn2
+#define cb3 cn3
+#define cb4 cn4
+#define cb5 cn5
+
+! Commented with standard ANSI color names
+*background: bg0
+*foreground: fg1
+*cursorColor: fg0
+! Black
+*color0:  bg0
+! Red
+*color1:  cn0
+! Green
+*color2:  cn1
+! Yellow
+*color3:  cn2
+! Blue
+*color4:  cn3
+! Magenta
+*color5:  cn4
+! Cyan
+*color6:  cn5
+! White
+*color7:  fg0
+! Bright Black
+*color8:  bg1
+! Bright Red
+*color9:  cb0
+! Bright Green
+*color10: cb1
+! Bright Yellow
+*color11: cb2
+! Bright Blue
+*color12: cb3
+! Bright Magenta 
+*color13: cb4
+! Bright Cyan
+*color14: cb5
+! Bright White
+*color15: fg1
